@@ -50,7 +50,7 @@ public class PlayingStandTest extends TestCase {
 
         stand.dropRed(0);
         stand.dropBlack(6);
-        assertTrue(stand.areFourConnected());  // Otra vez roto
+        assertFalse(stand.areFourConnected());
 
         stand.dropRed(0);
         stand.dropBlack(6);
@@ -196,7 +196,7 @@ public class PlayingStandTest extends TestCase {
 
         fillWholeStandWithoutWinner(stand);
 
-        assertTrue(stand.areFourConnected());  // Otra rotura  rehecha (assertFalse) 
+        assertFalse(stand.areFourConnected());  
         assertTrue(stand.isGameOver());
         assertNull(stand.getWinner());
 
